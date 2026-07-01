@@ -9,17 +9,21 @@ Utilizing empirical datasets cross-matched from the **Jodrell Bank Observatory (
 
 ## 🛠️ Implemented Statistical Methodologies
 * **Feature Engineering Optimization**: Implements the qualitatively modified fractional glitch activity parameter (\(a_g\)) to isolate and eliminate observational window irregularities [^1, 2].
-* **Goodness-of-Fit Validation**: Automates Kolmogorov-Smirnov (\(D\)) statistic computation and maps categorical null-hypothesis (\(H_0\)) rejection logic [^1, 2].
-* **Bayesian Model Selection**: Computes penalized complexity metrics via the Bayesian Information Criterion (\(\text{BIC}\)) to validate mixture model structures:
-  \[\text{BIC} = k \ln(n) - 2\ln(\hat{L})\]
-* **Bayesian Inference via MCMC**: Deploys multi-chain sampling via `PyMC` to evaluate posterior probability densities and map High-Density Intervals (\(\text{HDI}\)) for correlation parameters [^1, 2].
+* **Goodness-of-Fit Validation**: Automates Kolmogorov-Smirnov (D) statistic computation and maps categorical null-hypothesis (H₀) rejection logic [^1, 2].
+* **Bayesian Model Selection**: Computes penalized complexity metrics via the Bayesian Information Criterion (BIC) to validate mixture model structures [^1, 2]:
+
+\[BIC = k \ln(n) - 2\ln(\hat{L})\]
+
+* **Bayesian Inference via MCMC**: Deploys multi-chain sampling via `PyMC` to evaluate posterior probability densities and map High-Density Intervals (HDI) for correlation parameters [^1, 2]:
+
+\[P(\theta \mid \mathcal{D}) = \frac{P(\mathcal{D} \mid \theta) \cdot P(\theta)}{P(\mathcal{D})}\]
 
 ---
 
 ## 📦 Core Architecture Structure
 ```text
 ├── pulsar_analytics_suite.py  # Production Statistical Architecture Class
-└── README.md                  # Computational Briefing Documentation
+└── README.md                  # Computational Briefing Documentation (This File)
 ```
 
 ---
@@ -58,4 +62,4 @@ print(mcmc_results)
 
 ---
 _Note: Developed as a research-grade open-source suite for data scientist portfolios and advanced astronomical telemetry indexing._
-en-source analytical tool for computational astrophysics workflows._
+
