@@ -8,15 +8,15 @@ Utilizing empirical datasets cross-matched from the **Jodrell Bank Observatory (
 ---
 
 ## 🛠️ Implemented Statistical Methodologies
-* **Feature Engineering Optimization**: Implements the qualitatively modified fractional glitch activity parameter ($\(a_g\)$) to isolate and eliminate observational window irregularities.
+* **Feature Engineering Optimization**: Implements the qualitatively modified fractional glitch activity parameter to isolate and eliminate observational window irregularities.
 * **Goodness-of-Fit Validation**: Automates Kolmogorov-Smirnov (D) statistic computation and maps categorical null-hypothesis (H₀) rejection logic.
 * **Bayesian Model Selection**: Computes penalized complexity metrics via the Bayesian Information Criterion (BIC) to validate mixture model structures:
 
-$\[BIC = k \ln(n) - 2\ln(\hat{L})\]$
+$BIC = k \ln(n) - 2\ln(\hat{L})$
 
 * **Bayesian Inference via MCMC**: Deploys multi-chain sampling via `PyMC` to evaluate posterior probability densities and map High-Density Intervals (HDI) for correlation parameters:
 
-$\[P(\theta \mid \mathcal{D}) = \frac{P(\mathcal{D} \mid \theta) \cdot P(\theta)}{P(\mathcal{D})}\]$
+$P(\theta \mid \mathcal{D}) = \frac{P(\mathcal{D} \mid \theta) \cdot P(\theta)}{P(\mathcal{D})}$
 
 ---
 
