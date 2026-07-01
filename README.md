@@ -3,20 +3,20 @@
 ## 🔬 Project Overview & Computational Scope
 This repository houses an advanced **Bayesian Model Validation and Statistical Selection Suite** engineered to characterize the underlying stochastics of pulsar glitch size profiles and inter-glitch time intervals. 
 
-Utilizing empirical datasets cross-matched from the **Jodrell Bank Observatory (JBO)** and the **Australian Telescope National Facility (ATNF)**, the pipeline implements multi-model distribution fitting (Gaussian, Log-Normal, Exponential, Power-Law) alongside multi-modal mixture testing. It automates non-parametric goodness-of-fit validations (**Kolmogorov-Smirnov Tests**) and conducts advanced **Bayesian Parameter Estimation via Markov Chain Monte Carlo (MCMC)** simulations to quantify structural correlation bounds [^1, 2].
+Utilizing empirical datasets cross-matched from the **Jodrell Bank Observatory (JBO)** and the **Australian Telescope National Facility (ATNF)**, the pipeline implements multi-model distribution fitting (Gaussian, Log-Normal, Exponential, Power-Law) alongside multi-modal mixture testing. It automates non-parametric goodness-of-fit validations (**Kolmogorov-Smirnov Tests**) and conducts advanced **Bayesian Parameter Estimation via Markov Chain Monte Carlo (MCMC)** simulations to quantify structural correlation bounds.
 
 ---
 
 ## 🛠️ Implemented Statistical Methodologies
-* **Feature Engineering Optimization**: Implements the qualitatively modified fractional glitch activity parameter (\(a_g\)) to isolate and eliminate observational window irregularities [^1, 2].
-* **Goodness-of-Fit Validation**: Automates Kolmogorov-Smirnov (D) statistic computation and maps categorical null-hypothesis (H₀) rejection logic [^1, 2].
-* **Bayesian Model Selection**: Computes penalized complexity metrics via the Bayesian Information Criterion (BIC) to validate mixture model structures [^1, 2]:
+* **Feature Engineering Optimization**: Implements the qualitatively modified fractional glitch activity parameter ($\(a_g\)$) to isolate and eliminate observational window irregularities.
+* **Goodness-of-Fit Validation**: Automates Kolmogorov-Smirnov (D) statistic computation and maps categorical null-hypothesis (H₀) rejection logic.
+* **Bayesian Model Selection**: Computes penalized complexity metrics via the Bayesian Information Criterion (BIC) to validate mixture model structures:
 
-\[BIC = k \ln(n) - 2\ln(\hat{L})\]
+$\[BIC = k \ln(n) - 2\ln(\hat{L})\]$
 
-* **Bayesian Inference via MCMC**: Deploys multi-chain sampling via `PyMC` to evaluate posterior probability densities and map High-Density Intervals (HDI) for correlation parameters [^1, 2]:
+* **Bayesian Inference via MCMC**: Deploys multi-chain sampling via `PyMC` to evaluate posterior probability densities and map High-Density Intervals (HDI) for correlation parameters:
 
-\[P(\theta \mid \mathcal{D}) = \frac{P(\mathcal{D} \mid \theta) \cdot P(\theta)}{P(\mathcal{D})}\]
+$\[P(\theta \mid \mathcal{D}) = \frac{P(\mathcal{D} \mid \theta) \cdot P(\theta)}{P(\mathcal{D})}\]$
 
 ---
 
